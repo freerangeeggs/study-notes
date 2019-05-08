@@ -1,5 +1,7 @@
 # Exam AZ-900: Microsoft Azure Fundamentals
 
+[[Microsoft Learning] Exam AZ-900: Microsoft Azure Fundamentals](https://www.microsoft.com/en-us/learning/exam-AZ-900.aspx)
+
 ## Skills Measured
 
 ### [Understand cloud concepts](./cloud-concepts.md) (15-20%)
