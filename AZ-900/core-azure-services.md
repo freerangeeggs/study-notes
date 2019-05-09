@@ -217,13 +217,60 @@ The Azure Marketplace allows Cloud Service Providers (CSPs) to sell their produc
 
 #### SQL Data Warehouse
 
-See above
+Did it earlier, see above
 
 #### HDInsight
 
+- [[Microsoft Docs] Azure HDInsight](https://docs.microsoft.com/en-us/azure/hdinsight/)
+
+> Azure HDInsight is a managed, full-spectrum, open-source analytics service for enterprises. HDInsight is a cloud service that makes it easy, fast, and cost-effective to process massive amounts of data. HDInsight also supports a broad range of scenarios, like extract, transform, and load (ETL); data warehousing; machine learning; and IoT.
+
+HDInsight is analytics on big data, it works with:
+
+- Apache Hadoop;
+- Apache Spark;
+- Apache Hive;
+- Apache LLAP;
+- Apache Kafka;
+- Apache Storm; and
+- Microsoft Machine Learning Server
+
+#### Data Lake Analytics
+
+- [[Microsoft Docs] Azure Data Lake Analytics](https://docs.microsoft.com/en-us/azure/data-lake-analytics/)
+
+> Azure Data Lake Analytics is an on-demand analytics job service that simplifies big data. Instead of deploying, configuring, and tuning hardware, you write queries to transform your data and extract valuable insights. The analytics service can handle jobs of any scale instantly by setting the dial for how much power you need.
+
+A SaaS offering allowing you to create and run queries against a dataset, without the needs to worry about setting up compute power to process them. You pay for the compute you use.
+
 ### Artificial Intelligence (AI) and products that are available for AI such as Azure Machine Learning Service and Studio
 
+- [[Microsoft Learn] Azure Machine Learning service vs Azure Machine Learning Studio](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-machine-learning-service/2-azure-ml-service-vs-ml-studio)
+- [[Azure] Machine Learning Service](https://azure.microsoft.com/en-us/services/machine-learning-service/)
+- [[Microsoft Docs] Machine Learning Studio](https://docs.microsoft.com/en-us/azure/machine-learning/studio/)
+- [Azure Machine Learning Studio](https://studio.azureml.net/)
+
+> **Azure Machine Learning Studio** is a drag-and-drop visual workspace that is user-friendly and doesn't require any programming. It's ideal for learning data science and for small machine learning projects.
+>
+> **Azure Machine Learning service** provides callable services to scale, monitor, and deploy machine learning models. It's meant to augment and extend the data science pipeline with integrated Azure services. The Azure Machine Learning service SDK lets you write code that uses these prebuilt services and integrate them into your data science workflow.
+
+So... ML Studio is to Logic Apps as ML Service is to Azure Functions.
+
 ### Serverless computing and Azure products that are available for serverless computing such as Azure Functions, Logic Apps and App grid
+
+**Azure Functions** and **Logic Apps** have been covered in *Products available for Compute* above; I am not doing it again
+
+#### App Grid
+
+Azure App Grid isn't a thing, but **Event Grid** is, and I'd say that is what they are asking for.
+
+[[Microsoft Learn] Choose Azure Event Grid](https://docs.microsoft.com/en-us/learn/modules/choose-a-messaging-model-in-azure-to-connect-your-services/4-choose-event-grid)
+
+> Azure Event Grid is a fully-managed event routing service running on top of Azure Service Fabric. Event Grid distributes events from different sources, such as Azure Blob storage accounts or Azure Media Services, to different handlers, such as Azure Functions or Webhooks. Event Grid was created to make it easier to build event-based and serverless applications on Azure.
+
+Essentially, anything can publish to the event grid, and anything can subscribe to the events published.
+
+You can publish tto specific users of an app about a new feature they may like, and their devices (which are subscribed to event grid) will receive the update.
 
 ### Benefits and outcomes of using Azure solutions
 
