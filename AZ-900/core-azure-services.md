@@ -6,41 +6,41 @@
 For example, *Australia East* is located somewhere in Sydney, Australia; *Australia Southeast* is somewhere in Melbourne, Australia.
 There are special regions for certain governments (like USA and Australia) and countries (like China).
 
-[[Microsoft Learn] Datacenters and Regions in Azure](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/2-azure-datacenter-locations)
+- [[Microsoft Learn] Datacenters and Regions in Azure](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/2-azure-datacenter-locations)
 
 **Geographies** Are areas of the globe that contains many Azure regions, but are geopolitically specific (like APAC or Europe)
 
-[[Microsoft Learn] Geographies](https://docs.microsoft.com/en-us/learn/modules/)explore-azure-infrastructure/3-geographies
+- [[Microsoft Learn] Geographies](https://docs.microsoft.com/en-us/learn/modules/)explore-azure-infrastructure/3-geographies
 
 **Availability Zones** are physically separate datacentres within an Azure region. They are completely independant of each other and designed to add fault-tolerant redundancies to your apps. You can choose to use Availability Zones when setting up specific services in Azure (like VMs, Disks, Load Balancers, and SQL Databases).
 
-[[Microsoft Learn ] Availability Zones](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/4-availability-zones)
+- [[Microsoft Learn ] Availability Zones](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/4-availability-zones)
 
 **Region Pairs** Are the grouping of two regions within the same aeography but far enough away to ensure they will not be taken down by the same disaster.
 
-[[Microsoft Learn] Region Pairs](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/5-region-pairs)
+- [[Microsoft Learn] Region Pairs](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/5-region-pairs)
 
 **Resource Groups** are containers that hold related resources for an Azure solution. The resource group can include all the resources for the solution, or only those resources that you want to manage as a group. All resources must be in a resource group and a resource can only be a member of a single resource group. Resources can be moved between resource groups at any time. Resource groups can't be nested. Before any resource can be provisioned, you need a resource group for it to be placed in.
 
-[[Microsoft Learn] Principles of resource groups](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups)
+- [[Microsoft Learn] Principles of resource groups](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups)
 
 The **Azure Resource manager** is the core service APIS for accessing/ managing Azure services. The Portal, Powershell commandlets, and CLI all use the Azure Resource Manager.
 
 You can deploy scripts to the Resource manager to roll-out a bunch of resources at once, unlike the portal where you can only deploy one resource at a time.
 
-[[Microsoft Docs] Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview)
+- [[Microsoft Docs] Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview)
 
 ## Core products available in Azure
 
 ### Products available for Compute
 
-[[Microsoft Learn] Core Cloud Services - Azure compute options](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-compute/)
+- [[Microsoft Learn] Core Cloud Services - Azure compute options](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-compute/)
 
 > Azure compute is an on-demand computing service for running cloud-based applications. It provides computing resources like multi-core processors and supercomputers via virtual machines and containers. It also provides serverless computing to run apps without requiring infrastructure setup or configuration.
 
 #### Virtual Machines
 
-[[Microsoft Learn] Explore Azure Virtual Machines](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-compute/3-virtual-machines)
+- [[Microsoft Learn] Explore Azure Virtual Machines](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-compute/3-virtual-machines)
 
 > **Virtual machines**, or VMs, are software emulations of physical computers. They include a virtual processor, memory, storage, and networking resources. They host an operating system (OS), and you're able to install and run software just like a physical computer. And by using a remote desktop client, you can use and control the virtual machine as if you were sitting in front of it.
 
@@ -50,7 +50,7 @@ You can deploy scripts to the Resource manager to roll-out a bunch of resources 
 
 This is when you add have more than one VM running over different fault domains and update domains to allow for VM availability when there are scheduled or unscheduled maintenance, or when the VM Operating System needs an update.
 
-Availability sets are free, but the VMS are not. If you want at least one VM available at any time, you will be paing for at least two VMs.
+Availability sets are free, but the VMS are not. If you want at least one VM available at any time, you will be paying for at least two VMs.
 
 #### Virtual Machine Scale Sets
 
@@ -68,7 +68,7 @@ With this, you are not focusing on VM or Application Updates, but just the imple
 
 #### Serverless
 
-Serverless is next-level PaaS, you don't even need to worry about scaling or performance. You just worry about what it is going to do (i.e. the logic), not how it is going to do it (i.e. the infrastructure or scaling). You pay for what is used, when nothing is happing, you aint paying.
+Serverless is next-level PaaS, you don't even need to worry about scaling or performance. You just worry about what it is going to do (i.e. the logic), not how it is going to do it (i.e. the infrastructure or scaling). You pay for what is used, when nothing is happing, you aren't paying.
 
 With Azure, you have two options here:
 
@@ -85,7 +85,7 @@ Functions run a function, Logic Apps run a workflow.
 
 #### Virtual Network
 
-[[Microsoft Learn] Deploy your site to Azure](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-networking/2-deploy-to-azure)
+- [[Microsoft Learn] Deploy your site to Azure](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-networking/2-deploy-to-azure)
 
 > A *virtual network* is a logically isolated network on Azure.
 >
@@ -99,7 +99,7 @@ You can use expose a VM to a public IP, and separate other VMs by subnet to isol
 
 #### Load Balancer
 
-[[Microsoft Learn] Scale with Azure Load Balancer](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-networking/3-scale-load-balancer)
+- [[Microsoft Learn] Scale with Azure Load Balancer](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-networking/3-scale-load-balancer)
 
 > A *load balancer* distributes traffic evenly among each system in a pool. A load balancer can help you achieve both high availability and resiliency.
 
@@ -107,13 +107,13 @@ Rather than having one VM processing requests, you can have multiple sitting beh
 
 #### VPN Gateway
 
-[Azure VPN Gateway](https://azure.microsoft.com/en-us/services/vpn-gateway/)
+- [[Microsoft Docs] Azure VPN Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/)
 
 VPN Gateway allows your on-premises environment to connect to a Virtual Network in Azure.
 
 #### Application Gateway
 
-[Azure Application Gateway](https://azure.microsoft.com/en-us/services/application-gateway/)
+- [[Microsoft Docs] Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/)
 
 > If all your traffic is HTTP, a potentially better option is to use Azure Application Gateway. Application Gateway is a load balancer designed for web applications. It uses Azure Load Balancer at the transport level (TCP) and applies sophisticated URL-based routing rules to support several advanced scenarios.
 
@@ -133,7 +133,7 @@ Azure CDN will get what is in Azure Storage, and place it in hundreds of Points 
 
 ### Products available for Storage such as Blob Storage, Disk Storage, File Storage, and Archive Storage
 
-[[Microsoft Learn] Core Cloud Services - Azure data storage options](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure)
+- [[Microsoft Learn] Core Cloud Services - Azure data storage options](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure)
 
 #### Blob Storage
 
@@ -142,6 +142,8 @@ Azure CDN will get what is in Azure Storage, and place it in hundreds of Points 
 Blob storage is where you store your files. There is no directory structure like you are used to on you Operating system, instead the file name defines the *directory path*. i.e. If you wanted a file to look like it is in a folder, you put it in a `foldername/filename.extension` format.
 
 #### Azure Data Lake Storage Gen2
+
+- [[Microsoft Learn] Introduction to Azure Data Lake storage](https://docs.microsoft.com/en-us/learn/modules/introduction-to-azure-data-lake-storage/)
 
 > The Data Lake feature allows you to perform analytics on your data usage and prepare reports. Data Lake is a large repository that stores both structured and unstructured data.
 
@@ -171,7 +173,7 @@ These come in three different types; hot, cool, and archive.
 
 ### Products available for Databases such as CosmosDB, Azure SQL Database, Azure Database Migration service, and Azure SQL Data Warehouse
 
-[[Microsoft Learn] How Azure data storage can meet your business storage needs](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure/3-how-azure-storage-meets-your-business-storage-needs)
+- [[Microsoft Learn] How Azure data storage can meet your business storage needs](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure/3-how-azure-storage-meets-your-business-storage-needs)
 
 #### Azure SQL Database
 
@@ -187,17 +189,43 @@ CosmosDB can have multiple primary databases, and is quickly replicated worldwid
 
 #### Azure Database Migration service
 
+- [[Microsoft Docs] Azure Database Migration Service](https://docs.microsoft.com/en-us/azure/dms/)
+
+> Azure Database Migration Service enables seamless migrations from multiple database sources to Azure Data platforms with minimal downtime. The service uses the Data Migration Assistant to generate assessment reports that provide recommendations to guide you through the changes required prior to performing a migration. When you're ready to begin the migration process, the Azure Database Migration Service performs all of the required steps.
+
 #### Azure SQL Data Warehouse
+
+- [[Microsoft Docs] SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/)
+
+> SQL Data Warehouse is a cloud-based Enterprise Data Warehouse (EDW) that leverages Massively Parallel Processing (MPP) to quickly run complex queries across petabytes of data. Use SQL Data Warehouse as a key component of a big data solution.
 
 ### The Azure Marketplace and its usage scenarios
 
+- [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/)
+
+The Azure Marketplace allows Cloud Service Providers (CSPs) to sell their products and services through Azure. This could be utilising existing Azure services and adding their functionality on top, then on-selling to the customer.
+
 ## Solutions available on Azure
 
-- describe Internet of Things (IoT) and products that are available for IoT on Azure such as IoT Fundamentals, IoT Hub and IoT Central
-- describe Big Data and Analytics and products that are available for Big Data and Analytics such as SQL Data Warehouse, HDInsight and Data Lake Analytics
-- describe Artificial Intelligence (AI) and products that are available for AI such as Azure Machine Learning Service and Studio
-- describe Serverless computing and Azure products that are available for serverless computing such as Azure Functions, Logic Apps and App grid
-- describe the benefits and outcomes of using Azure solutions
+-[[Microsoft Learn] Microsoft Azure IoT strategy and solutions](https://docs.microsoft.com/en-us/learn/modules/azure-iot-strategy-and-solutions/index)
+
+### Internet of Things (IoT) and products that are available for IoT on Azure such as IoT Fundamentals, IoT Hub and IoT Central
+
+- [[Microsoft Learn] Azure IoT services](https://docs.microsoft.com/en-us/learn/modules/azure-iot-strategy-and-solutions/4-azure-iot-services)
+
+### Big Data and Analytics and products that are available for Big Data and Analytics such as SQL Data Warehouse, HDInsight and Data Lake Analytics
+
+#### SQL Data Warehouse
+
+See above
+
+#### HDInsight
+
+### Artificial Intelligence (AI) and products that are available for AI such as Azure Machine Learning Service and Studio
+
+### Serverless computing and Azure products that are available for serverless computing such as Azure Functions, Logic Apps and App grid
+
+### Benefits and outcomes of using Azure solutions
 
 ## Azure management tools
 
@@ -210,18 +238,18 @@ The [Azure PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/
 
 [Azure Cloud Shell](https://shell.azure.com/) allows you to run Azure CLI or PowerShell commands against a subscription without needing to install anything. It also has a pre-installed [suite of tools](https://docs.microsoft.com/en-us/azure/cloud-shell/features#tools) to help you work.
 
-The [Azure Mobile App](https://aka.ms/azuremobileapp/) gives limited management of azure servies, but keeps getting better. Also have the Cloud Shell built in.
+The [Azure Mobile App](https://aka.ms/azuremobileapp/) gives limited management of azure services, but keeps getting better. Also have the Cloud Shell built in.
 
 ### Azure Advisor
 
 - [[Microsoft Docs] Introduction to Azure Advisor](https://docs.microsoft.com/en-us/azure/advisor/advisor-overview)
 
 > Azure Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. It analyzes your resource configuration and usage telemetry. It then recommends solutions to help improve the performance, security, and high availability of your resources while looking for opportunities to reduce your overall Azure spend.
-
+>
 > Azure Advisor is a free service built into Azure that provides recommendations on **high availability**, **security**, **performance**, and **cost**. Advisor analyzes your deployed services and looks for ways to improve your environment across those four areas.
 
 Advisor tells you things that you can do to improve security and performance
 
-![](https://docs.microsoft.com/en-us/learn/modules/predict-costs-and-optimize-spending/media/3-advisor-recommendations.png)
+![An example of Azure Advisor](https://docs.microsoft.com/en-us/learn/modules/predict-costs-and-optimize-spending/media/3-advisor-recommendations.png)
 
 Clicking through the recommendations will tell you why they recommend the change, what to change it on, and why. It may group a single change on to multiple services you have configured in Azure.
