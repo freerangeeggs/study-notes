@@ -83,9 +83,111 @@ Functions run a function, Logic Apps run a workflow.
 
 ### Products available for Networking such as Virtual Network, Load Balancer, VPN Gateway, Application Gateway and Content Delivery Network
 
+#### Virtual Network
+
+[[Microsoft Learn] Deploy your site to Azure](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-networking/2-deploy-to-azure)
+
+> A *virtual network* is a logically isolated network on Azure.
+>
+> A virtual network allows Azure resources to securely communicate with each other, the internet, and on-premises networks. A virtual network is scoped to a single region; however, multiple virtual networks from different regions can be connected together using virtual network peering.
+
+You can use expose a VM to a public IP, and separate other VMs by subnet to isolate them from the outside world.
+
+#### Network Security Group (NSG)
+
+> A network security group, or NSG, allows or denies inbound network traffic to your Azure resources. Think of a network security group as a cloud-level firewall for your network.
+
+#### Load Balancer
+
+[[Microsoft Learn] Scale with Azure Load Balancer](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-networking/3-scale-load-balancer)
+
+> A *load balancer* distributes traffic evenly among each system in a pool. A load balancer can help you achieve both high availability and resiliency.
+
+Rather than having one VM processing requests, you can have multiple sitting behind a load balancer, which will redirect traffic to the VMs that are responsive. The load balancer now holds the public IP so users are still just pointing to the same spot.
+
+#### VPN Gateway
+
+[Azure VPN Gateway](https://azure.microsoft.com/en-us/services/vpn-gateway/)
+
+VPN Gateway allows your on-premises environment to connect to a Virtual Network in Azure.
+
+#### Application Gateway
+
+[Azure Application Gateway](https://azure.microsoft.com/en-us/services/application-gateway/)
+
+> If all your traffic is HTTP, a potentially better option is to use Azure Application Gateway. Application Gateway is a load balancer designed for web applications. It uses Azure Load Balancer at the transport level (TCP) and applies sophisticated URL-based routing rules to support several advanced scenarios.
+
+This is an application-level load balancer and allows for more intelligent routing (like URL path) and a Web Application Firewall.
+
+#### Traffic Manager
+
+> Traffic Manager uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint.
+
+If your servers are in many different geographic regions, Traffic manager will use DNS to point the user to the server with the lowest latency (i.e. the fastest).
+
+#### Content Delivery Network (CDN)
+
+> A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. It is a way to get content to users in their local region to minimize latency.
+
+Azure CDN will get what is in Azure Storage, and place it in hundreds of Points of Presence (PoPs) around the world. This minimises the distance and therefore time for the user to get the files needed. This is great for the fast loading of static content (like images and Single-Page Applications).
+
 ### Products available for Storage such as Blob Storage, Disk Storage, File Storage, and Archive Storage
 
+[[Microsoft Learn] Core Cloud Services - Azure data storage options](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure)
+
+#### Blob Storage
+
+> Azure Blob Storage is unstructured, meaning that there are no restrictions on the kinds of data it can hold. Blobs are highly scalable and apps work with blobs in much the same way as they would work with files on a disk, such as reading and writing data. Blob Storage can manage thousands of simultaneous uploads, massive amounts of video data, constantly growing log files, and can be reached from anywhere with an internet connection.
+
+Blob storage is where you store your files. There is no directory structure like you are used to on you Operating system, instead the file name defines the *directory path*. i.e. If you wanted a file to look like it is in a folder, you put it in a `foldername/filename.extension` format.
+
+#### Azure Data Lake Storage Gen2
+
+> The Data Lake feature allows you to perform analytics on your data usage and prepare reports. Data Lake is a large repository that stores both structured and unstructured data.
+
+#### Azure Files
+
+> Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol. Azure file shares can be mounted concurrently by cloud or on-premises deployments of Windows, Linux, and macOS.
+
+Think of Azure Files like a mapped drive for the cloud.
+
+#### Azure Queue
+
+> Azure Queue storage is a service for storing large numbers of messages that can be accessed from anywhere in the world.
+
+Queue storage is FIFO messaging, Apps or services put a message on the queue, and a receiving app or  service (like an Azure Function) takes the message off the queue and does something with it.
+
+#### Disk Storage
+
+> Disk storage provides disks for virtual machines, applications, and other services to access and use as they need, similar to how they would in on-premises scenarios. Disk storage allows data to be persistently stored and accessed from an attached virtual hard disk.
+
+Disk storage is essentially a way to store virtual hard disks (.vhd files) for a VM to read from. the storage method is optimised to support the large binary format of a .vhd file.
+
+#### Storage Tiers
+
+These come in three different types; hot, cool, and archive.
+
+**Hot** tier is for frequently accessed files; it is cheap to access the files but the cost to store is higher than other tiers. **Cool** tier is for files not so often accessed; it is cheaper to store the files but cost a little more to access than the hot tier. **Archive** is a more extreme version of cool, it is very cheap to store, but access costs more than cool and has some latency.
+
 ### Products available for Databases such as CosmosDB, Azure SQL Database, Azure Database Migration service, and Azure SQL Data Warehouse
+
+[[Microsoft Learn] How Azure data storage can meet your business storage needs](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure/3-how-azure-storage-meets-your-business-storage-needs)
+
+#### Azure SQL Database
+
+> Azure SQL Database is a relational database as a service (DaaS) based on the latest stable version of the Microsoft SQL Server database engine. SQL Database is a high-performance, reliable, fully managed and secure database.
+
+Azure SQL allows you to use SQL server without the need for implementing and managing a VM. Depending on the plan, economies of scale allows the price point to be very low but can blow out depending on quantity of data and number of transactions.
+
+#### CosmosDB
+
+> Azure Cosmos DB is a globally distributed database service. It supports schema-less data that lets you build highly responsive and Always On applications to support constantly changing data. You can use this feature to store data that is updated and maintained by users around the world.
+
+CosmosDB can have multiple primary databases, and is quickly replicated worldwide with guaranteed single-digit millisecond response times. This is a lot more expensive than Azure Storage tables or Azure SQL DTU plans.
+
+#### Azure Database Migration service
+
+#### Azure SQL Data Warehouse
 
 ### The Azure Marketplace and its usage scenarios
 

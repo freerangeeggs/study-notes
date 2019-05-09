@@ -40,8 +40,7 @@ Purchasing capital (like a server) often takes long and you generally need to pu
 ### Consumption-based model
 
 You pay for what you use, after you have used it. No different to paying for power or water.
-Azure has a "Pay-as-you-go" plan, which is precicely that.
-
+Azure has a "Pay-as-you-go" plan, which is precisely that.
 
 ## Describe the differences between Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS) and Software-as-a-Service (SaaS)
 
