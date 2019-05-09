@@ -2,32 +2,42 @@
 
 ## Understand securing network connectivity in Azure
 
-- describe Azure Firewall
-- describe Azure DDoS Protection
-- describe Network Security Group (NSG)
-- choose an appropriate Azure security solution
+### Describe Azure Firewall
+
+### Describe Azure DDoS Protection
+
+### Describe Network Security Group (NSG)
+
+### Choose an appropriate Azure security solution
 
 ## Describe core Azure Identity services
 
-- understand the difference between authentication and authorization
-- describe Azure Active Directory
-- describe Azure Multi-Factor Authentication
+### Understand the difference between authentication and authorization
+
+### Describe Azure Active Directory
+
+### Describe Azure Multi-Factor Authentication
 
 ## Describe security tools and features of Azure
 
-- describe Azure Security
-- understand Azure Security center usage scenarios
-- describe Key Vault
-- describe Azure Information Protection (AIP)
-- describe Azure Advanced Threat Protection (ATP)
+### Describe Azure Security
+
+### Understand Azure Security center usage scenarios
+
+### Describe Key Vault
+
+### Describe Azure Information Protection (AIP)
+
+### Describe Azure Advanced Threat Protection (ATP)
 
 ## Azure governance methodologies
 
 ### Azure Policies
 
-> Azure Policy is a service you can use to create, assign, and manage policies. These policies apply and enforce rules that your resources need to follow. These policies can enforce these rules when resources are created, and can be evaluated against existing resources to give visibility into compliance.
-
 - [[Microsoft Learn] Use policies to enforce standards](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/4-use-policies-to-enforce-standards)
+- [[Microsoft Learn] Apply and monitor infrastructure standards with Azure Policy](https://docs.microsoft.com/en-us/learn/modules/intro-to-governance/index)
+
+> Azure Policy is a service you can use to create, assign, and manage policies. These policies apply and enforce rules that your resources need to follow. These policies can enforce these rules when resources are created, and can be evaluated against existing resources to give visibility into compliance.
 
 ### Initiatives
 
@@ -43,7 +53,7 @@ Lock down a resource to stop accidental changes/deletions.
 
 > Resource locks can set to either Delete or Read-only. Delete will allow all operations against the resource but block the ability to delete it. Read-only will only allow read activities to be performed against it, blocking any modification or deletion of the resource. Resource locks can be applied to subscriptions, resource groups, and to individual resources, and are inherited when applied at higher levels.
 
-Locks can be added from the settings navigation on any resouce blade.
+Locks can be added from the settings navigation on any resource blade.
 
 - [[Microsoft Learn] Use resource locks to protect resources](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/6-use-resource-locks-to-protect-resources)
 
