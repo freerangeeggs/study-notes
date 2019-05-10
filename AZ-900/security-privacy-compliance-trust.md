@@ -85,7 +85,17 @@ It's analysis and reporting on services in Azure. For example you can see how mu
 
 ### Azure Service Health
 
+> Azure Service Health is a suite of experiences that provide personalized guidance and support when issues with Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. Azure Service Health can also help you prepare for planned maintenance and changes that could affect the availability of your resources.
+
+Azure Service Health provides up-to-date status information about the health of Azure services; in three parts:
+
+- Azure Status provides a global view of the health state of Azure services.
+- Service Health provides you with a customizable dashboard that tracks the state of your Azure services in the regions where you use them.
+- Resource Health helps you diagnose and obtain support when an Azure service issue affects your resources.
+
 ### understand the use cases and benefits of Azure Monitor and Azure Service Health
+
+Azure Monitor is about the status of your resources, Azure Service Health is about the status of Azure's resources.
 
 ## Understand privacy, compliance and data protection standards in Azure
 
@@ -126,3 +136,5 @@ Compliance Manager gives you a risk assessment of your environments based on act
 ### Azure Government
 
 ### Azure Germany
+
+Only availble to those in the EU or European Free Trade Association (EFTA). Strictly follows Germanl data security and soverignty laws. Has it's own Azure Portal so the whole service is not open to audit from the US.
