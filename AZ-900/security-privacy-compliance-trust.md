@@ -41,11 +41,25 @@
 
 ### Initiatives
 
+- [[Microsoft Learn] Organize policy with initiatives](https://docs.microsoft.com/en-us/learn/modules/intro-to-governance/3-initiatives)
+
+> Initiatives work alongside policies in Azure Policy. An initiative definition is a set or group of policy definitions to help track your compliance state for a larger goal. Even if you have a single policy, we recommend using initiatives if you anticipate increasing the number of policies over time.
+
+Initiatives are a logical grouping of Policies, so you can assign an initiative and achieve the same result as individually assigning a bunch of policies.
+
 ### Role-Based Access Control (RBAC)
 
 Allow users and applications only access to the relevant resources and resource groups. Do this by creating roles and assigning roles to users; then you adjust the resource to only let specific roles have access.
 
 - [[Microsoft Learn] Secure resources with role-based access control](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/5-role-based-access)
+
+#### Management Groups
+
+- [[Microsoft Learn] Enterprise governance management](https://docs.microsoft.com/en-us/learn/modules/intro-to-governance/4-management-groups)
+
+> Azure Management Groups are containers for managing access, policies, and compliance across multiple Azure subscriptions. Management groups allow you to order your Azure resources hierarchically into collections, which provide a further level of classification that is above the level of subscriptions.
+
+Management Groups are control over subscriptions. Allows roles to flow to the subscriptions that are part of the Management Group.
 
 ### Resource Locks
 
@@ -59,19 +73,56 @@ Locks can be added from the settings navigation on any resource blade.
 
 ### Azure Advisor security assistance
 
-## Understand monitoring and reporting options in Azure
+## Monitoring and reporting options in Azure
 
-- describe Azure Monitor
-- describe Azure Service Health
-- understand the use cases and benefits of Azure Monitor and Azure Service Health
+- [[Microsoft Learn] Monitor your service health](Monitor your service health)
+
+### Azure Monitor
+
+> **Azure Monitor** maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps you understand how your applications are performing and proactively identifies issues affecting them and the resources they depend on.
+
+It's analysis and reporting on services in Azure. For example you can see how much CPU/memory a WebApp uses over a period of time.
+
+### Azure Service Health
+
+### understand the use cases and benefits of Azure Monitor and Azure Service Health
 
 ## Understand privacy, compliance and data protection standards in Azure
 
-- understand industry compliance terms such as GDPR, ISO and NIST
-- understand the Microsoft Privacy Statement
-- describe the Trust center
-- describe the Service Trust Portal
-- describe Compliance Manager
-- determine if Azure is compliant for a business need
-- understand Azure Government services
-- understand Azure Germany services
+- [[Microsoft Learn] Explore your service compliance with Compliance Manager](https://docs.microsoft.com/en-us/learn/modules/intro-to-governance/6-azure-compliance)
+
+### Industry compliance terms such as GDPR, ISO and NIST
+
+- **ISO**
+- **SOC**
+- **NIST**
+- **FedRAMP**
+- **GDPR**
+
+### The Microsoft Privacy Statement
+
+> The Microsoft privacy statement explains what personal data Microsoft processes, how Microsoft processes it, and for what purposes.
+>
+> The statement applies to the interactions Microsoft has with you and Microsoft products such as Microsoft services, websites, apps, software, servers, and devices. It is intended to provide openness and honesty about how Microsoft deals with personal data in its products and services.
+
+### Trust center
+
+> Trust Center is a website resource containing information and details about how Microsoft implements and supports security, privacy, compliance, and transparency in all Microsoft cloud products and services. The Trust Center is an important part of the Microsoft Trusted Cloud Initiative, and provides support and resources for the legal and compliance community.
+
+### Service Trust Portal
+
+> The Service Trust Portal (STP) hosts the Compliance Manager service, and is the Microsoft public site for publishing audit reports and other compliance-related information relevant to Microsoft’s cloud services. STP users can download audit reports produced by external auditors and gain insight from Microsoft-authored reports that provide details on how Microsoft builds and operates its cloud services.
+
+### Compliance Manager
+
+> Compliance Manager is a workflow-based risk assessment dashboard within the Trust Portal that enables you to track, assign, and verify your organization's regulatory compliance activities related to Microsoft professional services and Microsoft cloud services such as Office 365, Dynamics 365, and Azure.
+
+Compliance Manager gives you a risk assessment of your environments based on actions taken by you and by Microsoft.
+
+![Example of Compliance Manager](https://docs.microsoft.com/en-us/learn/modules/intro-to-governance/media/6-compliancemanager.png)
+
+### Determine if Azure is compliant for a business need
+
+### Azure Government
+
+### Azure Germany
