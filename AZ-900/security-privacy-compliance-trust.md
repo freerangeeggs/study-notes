@@ -20,6 +20,8 @@
 
 ## Describe security tools and features of Azure
 
+- [[Microsoft Learn] Get tips from Azure Security Center](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/2a-azure-security-center)
+
 ### Describe Azure Security
 
 ### Understand Azure Security center usage scenarios
