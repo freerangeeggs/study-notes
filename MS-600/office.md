@@ -1,6 +1,6 @@
 # Extend Office
 
-[[Microsoft Learn] Understand Office Add-ins fundamentals](https://docs.microsoft.com/en-us/learn/modules/understand-office-add-ins-fundamentals/)
+- [[Microsoft Learn] Understand Office Add-ins fundamentals](https://docs.microsoft.com/en-us/learn/modules/understand-office-add-ins-fundamentals/)
 
 ## Understand fundamental components and types of Office Add-ins
 
@@ -33,7 +33,7 @@ The manifest can be [side-loaded](https://docs.microsoft.com/en-us/office/dev/ad
 
 ## Understand Office JS APIs
 
-[[Microsoft Learn] Understand Office Javascript APIs](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/)
+- [[Microsoft Learn] Understand Office Javascript APIs](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/)
 
 ### The Office Add-in programming model
 
@@ -61,22 +61,29 @@ Will read a manifest and tell you if anything is incorrect or where things shoul
 
 ### Excel Javascript API
 
-Just read this: [[Microsoft Learn] Understand the capabilities of the Excel JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/4-understand-excel-javascript-api-capabilities)
+- [[Microsoft Learn] Understand the capabilities of the Excel JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/4-understand-excel-javascript-api-capabilities)
+- [[Microsoft Docs] Excel JavaScript API overview](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
 
 ### Outlook JavaScript API
 
-Just read this: [[Microsoft Learn] Understand the capabilities of the Outlook JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/5-understand-outlook-javascript-api-capabilities)
+- [[Microsoft Learn] Understand the capabilities of the Outlook JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/5-understand-outlook-javascript-api-capabilities)
+- [[Microsoft Docs] Outlook add-in APIs](https://docs.microsoft.com/en-us/outlook/add-ins/apis?context=office/dev/add-ins/context)
 
 It is missing information on [task pane add-ins](https://docs.microsoft.com/en-us/outlook/add-ins/add-in-commands-for-outlook#launching-a-task-pane) though.
 
 ### Word JavaScript API
 
-Just read this: [[Microsoft Learn] Understand the capabilities of the Word JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/6-understand-word-javascript-api-capabilities)
+- [[Microsoft Learn] Understand the capabilities of the Word JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/6-understand-word-javascript-api-capabilities)
+- [[Microsoft Docs] Word JavaScript API overview](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
 
 ### PowerPoint JavaScript API
+
+- [[Microsoft Docs] JavaScript API for PowerPoint](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/overview/powerpoint-add-ins-reference-overview)
+
 ### Custom functions
 
-[[Microsoft Learn] Understand the capabilities of custom functions](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/7-understand-custom-functions-capabilities)
+- [[Microsoft Learn] Understand the capabilities of custom functions](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/7-understand-custom-functions-capabilities)
+- [[Microsoft Docs] Create custom functions in Excel](https://docs.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview)
 
 This is in Excel only, and allows you to create a fucntion that can be referenced in a cell (like `VLOOKUP()`);
 As it does not have nay visible elements, there referencing `Office.js` but instead a `custom-functions-runtime.js`.
@@ -84,6 +91,12 @@ As it does not have nay visible elements, there referencing `Office.js` but inst
 When creating a custom function, JDoc comments are used to pass through the parameters for Excel to display to the user when they are using the function.
 
 To communicate with an active taskpane add-in, you need to use a storage API. You also have access to a dialog API.
+
+### Not mentioned but may be worthwhile
+
+- [[Microsoft Docs] OneNote JavaScript API overview](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
+- [[Microsoft Docs] JavaScript API for Project](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/overview/project-add-ins-reference-overview)
+- [[Microsoft Docs] Visio JavaScript API overview](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/overview/visio-javascript-reference-overview)
 
 ## Understand customization of Add-ins
 
