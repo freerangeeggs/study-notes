@@ -33,13 +33,57 @@ The manifest can be [side-loaded](https://docs.microsoft.com/en-us/office/dev/ad
 
 ## Understand Office JS APIs
 
-- understand the Office Add-in programming model
-- understand Office Add-in developer tools
-- understand the capabilities of the Excel Javascript API
-- understand the capabilities of the Outlook JavaScript API
-- understand the capabilities of the Word JavaScript API
-- understand the capabilities of the PowerPoint JavaScript API
-- understand the capabilities of custom functions
+[[Microsoft Learn] Understand Office Javascript APIs](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/)
+
+### The Office Add-in programming model
+
+Office proviced a JavaScript API that works as the interface between the Office App and your Add-in, there is a common API that is universal to all Office apps, and Host-specific APIs that deal with the specifics of an Office app (like picking a range in a spreadsheet, or the sender of an email).
+
+Each piece of functionality is part of a [requirement set](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/office-versions-and-requirement-sets), and you must check if an [office host supports a specific requirement set](https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-in-availability) if you want to use that functionality.
+
+### Office Add-in developer tools
+
+**Yeoman generator for Office Add-ins**
+
+Scaffolds an add-in with manifest for Word, Excel, PowerPoint, Outlook, OneNote, or Project. This is front-end only and in you can choose from a selection of JavaScript Frameworks.
+
+**Visual Studio**
+
+Scaffolds an add-in for Word, Excel, PowerPoint or Outlook only. Creates an MVC app so is front and back-end capable.
+
+**Script Lab**
+
+An add-in available through [Appsource](https://appsource.microsoft.com/en-us/product/office/wa104380862) that can be used as a sandbox for testing out stuff in Word, Excel, or PowerPoint.
+
+**Manifest validator**
+
+Will read a manifest and tell you if anything is incorrect or where things should be filled out. 
+
+### Excel Javascript API
+
+Just read this: [[Microsoft Learn] Understand the capabilities of the Excel JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/4-understand-excel-javascript-api-capabilities)
+
+### Outlook JavaScript API
+
+Just read this: [[Microsoft Learn] Understand the capabilities of the Outlook JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/5-understand-outlook-javascript-api-capabilities)
+
+It is missing information on [task pane add-ins](https://docs.microsoft.com/en-us/outlook/add-ins/add-in-commands-for-outlook#launching-a-task-pane) though.
+
+### Word JavaScript API
+
+Just read this: [[Microsoft Learn] Understand the capabilities of the Word JavaScript API](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/6-understand-word-javascript-api-capabilities)
+
+### PowerPoint JavaScript API
+### Custom functions
+
+[[Microsoft Learn] Understand the capabilities of custom functions](https://docs.microsoft.com/en-us/learn/modules/understand-office-javascript-apis/7-understand-custom-functions-capabilities)
+
+This is in Excel only, and allows you to create a fucntion that can be referenced in a cell (like `VLOOKUP()`);
+As it does not have nay visible elements, there referencing `Office.js` but instead a `custom-functions-runtime.js`.
+
+When creating a custom function, JDoc comments are used to pass through the parameters for Excel to display to the user when they are using the function.
+
+To communicate with an active taskpane add-in, you need to use a storage API. You also have access to a dialog API.
 
 ## Understand customization of Add-ins
 
