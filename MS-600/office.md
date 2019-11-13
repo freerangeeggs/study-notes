@@ -161,7 +161,7 @@ If you want to deploy to any O365 organization (i.e. ready for public use)
 | Web Browser | Browser dev tools | Visual Studio Debugger |
 | Windows (EdgeHTML) | [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) | Visual Studio Debugger |
 | Windows (IE11) | F12 dev tools | Visual Studio Debugger |
-| Mac | Safari Web Inspector | Safari Web Inspector |
+| Mac | [Safari Web Inspector](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/debug-office-add-ins-on-ipad-and-mac) | [Safari Web Inspector](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/debug-office-add-ins-on-ipad-and-mac) |
 | Outlook for iOS/Android | No idea | Visual Studio Debugger via Ngrok |
 | Custom functions | VS Code | unsupported? |
 
@@ -173,9 +173,15 @@ Safari Web Inspector requires Mac OS High Sierra and Office version 16.9.1 (buil
 
 ## Understand actionable messages
 
+- [[Microsoft Docs] Actionable messages in Outlook and Office 365 Groups](https://docs.microsoft.com/en-us/outlook/actionable-messages/)
+- [[Microsoft Docs] Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
+
 ### Features of actionable messages with an adaptive card
 
+**Adaptive Cards** are a messaging structure that doesn't cater for look and feel, that is handled in the host application (Outlook, Facebook Messenger, etc...). **Actionable Messages** add an interactive element by being able to perform actions (like approving a leave request via a button).
+
+The content of an Adaptive Card is in JSON.
 
 ### Scenarios for refreshing an actionable message
 
-
+[[Microsoft Docs] Refresh an actionable message when the user opens it](https://docs.microsoft.com/en-us/outlook/actionable-messages/auto-invoke)
