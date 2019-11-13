@@ -132,13 +132,44 @@ After that your app will get an authorization token, which needs to be sent as p
 
 ## Understand testing, debugging, and deployment options
 
+- [[Microsoft Learn] Introduction to testing, debugging, and deployment options for Office Add-ins](https://docs.microsoft.com/en-us/learn/modules/understand-test-debug-deployment-options/1-introduction)
+
 ### Select deployment options based on requirements
 
+If you want to test locally:
+
+- Sideload a manifest you can upload, or via a URL
+
+If you want to deploy just to your On-Prem organisation:
+
+- Outlook addins can be deployed via the Exchange admin center
+- Word/Excel/PowerPoint add-ins can be deployed via the SharePoint catalog
+
+If you want to deploy to your O365 organisation:
+
+- Use Centralized Deployment to deploy a file you can upload, via a URL, or via Appsource
+
+If you want to deploy to any O365 organization (i.e. ready for public use)
+
+- Submit to AppSource so those orgs can deploy via Centralized Deployment
 
 
 ### Testing and debugging concepts for Office Add-ins
 
+| Environment |  Yeoman Add-in (node) | Visual Studio Add-in (IIS) |
+|---|:---:|:---:|
+| Web Browser | Browser dev tools | Visual Studio Debugger |
+| Windows (EdgeHTML) | [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) | Visual Studio Debugger |
+| Windows (IE11) | F12 dev tools | Visual Studio Debugger |
+| Mac | Safari Web Inspector | Safari Web Inspector |
+| Outlook for iOS/Android | No idea | Visual Studio Debugger via Ngrok |
+| Custom functions | VS Code | unsupported? |
 
+EdgeHTML requires Windows 10 (version 1903 or later) and an Office 365 subscription (build 16.0.11629 or later). All others will be IE11.
+
+F12 dev tools can be found at either `C:\Windows\System32\F12\IEChooser.exe` or `C:\Windows\SysWOW64\F12\IEChooser.exe`.
+
+Safari Web Inspector requires Mac OS High Sierra and Office version 16.9.1 (build 18012504) or later.
 
 ## Understand actionable messages
 
