@@ -100,17 +100,51 @@ To communicate with an active taskpane add-in, you need to use a storage API. Yo
 
 ## Understand customization of Add-ins
 
-- understand the options of persisting state and settings
-- understand Office UI Fabric in Office Add-ins
-- understand when to use Microsoft Graph in Office Add-ins
-- understand authorization when using Microsoft Graph in Office Add-ins
+- [[Microsoft Learn] Introduction to Office Add-ins customization](https://docs.microsoft.com/en-us/learn/modules/understand-office-add-ins-customization/1-introduction)
+
+### Persisting state and settings
+
+There are a few Office API objects (i.e. in the JavaScript API) that persisits data based on the Office App you are in and the context you want to work with.
+
+Outlook has `RoamingSettings` and `CustomProperties`, which persist data to the user's mailbox and exchange item (email, appointment, etc...) respectively.
+
+The others have a `Settings` object which persists data to the document/workbook/presentation, and Word and Excel have a `CustomXmlParts` that persists to a custom XML section of the document or workbook.
+
+### Office UI Fabric in Office Add-ins
+
+- [Office UI Fabric](https://developer.microsoft.com/en-us/fabric)
+
+The fabric is a is baseline set of UI stylings and components that have an Office-style look and feel, although not required it can be useful.
+
+It comes in two parts: `Fabric Core` which is the CSS stylings, colours, and iconography, and `Fabric components` which are a collection of React components (buttons, input components, panels, lalala...)
+
+### When to use Microsoft Graph in Office Add-ins
+
+Use when you want to access data from AzureAD, Office365, Windows 10, Enterprise Mobility, Dynamics 365. 
+
+If you want to use the graph as part of your add-in, you will need to register the add-in as an AzureAD app, and provide consent scopes to what services you wish to use.
+
+### Authorization when using Microsoft Graph in Office Add-ins
+
+The user will need to be prompted to sign-in, AAD login prompts don't allow for iframes, which is what an add-in runs in, so you will need to use the dialog API to sign in and give consent to the scopes mentioned above.
+
+After that your app will get an authorization token, which needs to be sent as part of the headers in any request to the Graph.
 
 ## Understand testing, debugging, and deployment options
 
-- select deployment options based on requirements
-- understand testing and debugging concepts for Office Add-ins
+### Select deployment options based on requirements
+
+
+
+### Testing and debugging concepts for Office Add-ins
+
+
 
 ## Understand actionable messages
 
-- understand the features of actionable messages with an adaptive card
-- understand the scenarios for refreshing an actionable message
+### Features of actionable messages with an adaptive card
+
+
+### Scenarios for refreshing an actionable message
+
+
