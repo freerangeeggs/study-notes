@@ -4,6 +4,8 @@
 
 ### Determine the supported account type
 
+- [[Microsoft Learn] Account types in Microsoft Identity]
+(https://docs.microsoft.com/en-us/learn/modules/getting-started-identity/4-different-account-types)
 Three options here:
 
 - **Accounts in this organizational directory only**: The app is registered for a single tenant only.
@@ -16,7 +18,34 @@ Three options here:
 
 ### Define app roles
 
+App roles are specified in the app manifest, like so:
 
+```json
+"appRoles": [
+  {
+    "allowedMemberTypes": [
+      "User"
+    ],
+    "description": "Creators can create Surveys",
+    "displayName": "SurveyCreator",
+    "id": "1b4f816e-5eaf-48b9-8613-7923830595ad",
+    "isEnabled": true,
+    "value": "SurveyCreator"
+  },
+  {
+    "allowedMemberTypes": [
+      "User"
+    ],
+    "description": "Administrators can manage the Surveys in their tenant",
+    "displayName": "SurveyAdmin",
+    "id": "c20e145e-5459-4a6c-a074-b942bbd4cfe1",
+    "isEnabled": true,
+    "value": "SurveyAdmin"
+  }
+],
+```
+
+These roles are specific to the app only, and are not transferred. An Azure admin can assign users to each role within the app. If the tenant has AzureAD Premium, the admin can assign security groups.
 
 ## Implement Authentication
 
