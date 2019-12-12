@@ -63,10 +63,48 @@ These roles are specific to the app only, and are not transferred. An Azure admi
 
 ## Implement Authentication
 
+- [[Microsoft Docs] Single-page application: Acquire a token to call an API](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-acquire-token)
+
 ### Configure Microsoft Authentication Library (MSAL JS) for endpoint and token cache
+
+- [[Microsoft Docs] Single-page application: Code configuration](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-app-configuration)
+
+*I think* this means you need to include MSAL in your application, either by referencing the file in the CDN:
+
+```html
+<script type="text/javascript" src="https://alcdn.msauth.net/lib/1.1.3/js/msal.js"></script>
+```
+
+Or via NPM:
+
+```bash
+$ npm install msal
+```
+
+Then insert the following code in your solution:
+
+```javascript
+// Configuration object constructed.
+const config = {
+    auth: {
+        clientId: 'your_app_id',
+        redirectUri: "your_app_redirect_uri" //defaults to application start page
+    }
+}
+
+// create UserAgentApplication instance
+const userAgentApplication = new UserAgentApplication(config);
+```
+
+There are equivalent libraries for Angular and AngularJS, but the idea is the same.
+
 ### Plan and configure scopes for dynamic or static permission
+
+
+
 ### Use the MSAL JS login method
 
+- [[Microsoft Docs] Single-page application: Sign-in and Sign-out](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-sign-in)
 
 ## Configure Permissions to Consume an API
 
