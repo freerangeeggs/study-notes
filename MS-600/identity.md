@@ -63,8 +63,6 @@ These roles are specific to the app only, and are not transferred. An Azure admi
 
 ## Implement Authentication
 
-- [[Microsoft Docs] Single-page application: Acquire a token to call an API](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-acquire-token)
-
 ### Configure Microsoft Authentication Library (MSAL JS) for endpoint and token cache
 
 - [[Microsoft Docs] Single-page application: Code configuration](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-app-configuration)
@@ -88,7 +86,7 @@ Then insert the following code in your solution:
 const config = {
     auth: {
         clientId: 'your_app_id',
-        redirectUri: "your_app_redirect_uri" //defaults to application start page
+        redirectUri: "your_app_redirect_uri"
     }
 }
 
@@ -100,6 +98,11 @@ There are equivalent libraries for Angular and AngularJS, but the idea is the sa
 
 ### Plan and configure scopes for dynamic or static permission
 
+**Scopes** are the areas of an API you want access to. For example, in the Microsoft Graph you want to read the user's mail, the scope you woul want is `Mail.Read`.
+
+**Static scopes** are defined in the "API Permissions" of the AzureAD Application Registrations, and consented to on initial sign-in. If scopes are changed, the user needs to re-consent.
+
+**Dynamic Scopes** are not pre-defned, but requested at run-time, when wanted.
 
 
 ### Use the MSAL JS login method
@@ -118,6 +121,7 @@ There are equivalent libraries for Angular and AngularJS, but the idea is the sa
 ### Configure incremental consent scopes
 ### Call MSAL JS using AquireTokenSilent/AquireToken pattern
 
+- [[Microsoft Docs] Single-page application: Acquire a token to call an API](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-acquire-token)
 
 ## Implement Authorization in an API
 
