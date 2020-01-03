@@ -22,7 +22,7 @@ Three options here:
 
 **[On-behalf-of Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)** is when a backend service or web API needs to talk to another service or web API as if it was you. It will recieve a request from the application with an access token, and request a new access token to use when calling the additional service/API.
 
-**[Client credentials Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)** is auth without a user, ore more specifically when a service needs to authenticate to another service or API as the application and not a user. Auth is done without a UI (as there is no user), but instead will use the a client secret and password to connect, you can also use a client certificate for extra security.
+**[Client credentials Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)** is auth without a user, or more specifically when a service needs to authenticate to another service or API as the application and not a user. Auth is done without a UI (as there is no user), but instead will use the a client secret and password to connect, you can also use a client certificate for extra security.
 
 **[Device Code Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-device-code)**  is useful for scenarios where a user needs to sign in but you cannot open a login prompt, such as IoT devices or on a command line application. The user is told to browse to a url, and enter a code that corresponds with the auth request; they then will need to log in and authorise the application.
 
@@ -59,7 +59,7 @@ App roles are specified in the app manifest, like so:
 ],
 ```
 
-These roles are specific to the app only, and are not transferred. An Azure admin can assign users to each role within the app. If the tenant has AzureAD Premium, the admin can assign security groups.
+These roles are specific to the app only, and are not transferred. An Azure admin can assign users to each role within the app. If the tenant has AzureAD Premium, the admin can assign security groups to a role.
 
 ## Implement Authentication
 
