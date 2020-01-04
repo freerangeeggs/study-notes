@@ -102,8 +102,7 @@ There are equivalent libraries for Angular and AngularJS, but the idea is the sa
 
 **Static scopes** are defined in the "API Permissions" of the AzureAD Application Registrations, and consented to on initial sign-in. If scopes are changed, the user needs to re-consent.
 
-**Dynamic Scopes** are not pre-defned, but requested at run-time, when wanted.
-
+**Dynamic Scopes** are not pre-defned, but requested at run-time, when wanted. Similar tor how an app asks for camera permissions at the time you want to take a profile photo, and not the first time you open the app.
 
 ### Use the MSAL JS login method
 
