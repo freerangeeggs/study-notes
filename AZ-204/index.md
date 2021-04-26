@@ -7,7 +7,8 @@ These are the skills measured as at March 26, 2021
 ### Implement IaaS solutions
 
 - provision virtual machines (VMs)
-- configure, validate, and deploy ARM templates- configure container images for solutions
+- configure, validate, and deploy ARM templates
+- configure container images for solutions
 - publish an image to the Azure Container Registry
 - run containers by using Azure Container Instance
 
